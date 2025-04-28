@@ -22,27 +22,27 @@ import collaboration from "@/assets/images/Quiz2/Profiling_Q2 – a5 - noText.we
 import leading from "@/assets/images/Quiz3/Profiling_Q3 – a5 - noText.webp";
 
 const points1 = [
-  { img: epic, text: "Epic" },
-  { img: head, text: "Head on" },
-  { img: fast, text: "As fast as possible" },
+  { img: epic, text: "ÉPICO" },
+  { img: head, text: "DE FRENTE" },
+  { img: fast, text: "LO MÁS RÁPIDO POSIBLE" },
 ];
 
 const points2 = [
-  { img: unique, text: "Unique" },
-  { img: plan, text: "With a plan" },
-  { img: oneStep, text: "One step at a time" },
+  { img: unique, text: "ÚNICO" },
+  { img: plan, text: "CON UN PLAN" },
+  { img: oneStep, text: "PASO A PASO" },
 ];
 
 const points3 = [
-  { img: winding, text: "Winding" },
-  { img: flow, text: "By going with the flow" },
-  { img: spontaneous, text: "Spontaneously" },
+  { img: winding, text: "SORPRENDENTE" },
+  { img: flow, text: "DEJÁNDOME LLEVAR" },
+  { img: spontaneous, text: "ESPONTÁNEAMENTE" },
 ];
 
 const points4 = [
-  { img: worth, text: "Worth savoring" },
-  { img: collaboration, text: "Collaboratively" },
-  { img: leading, text: "By leading" },
+  { img: worth, text: "INOLVIDABLE" },
+  { img: collaboration, text: "EN EQUIPO" },
+  { img: leading, text: "LIDERÁNDOLO" },
 ];
 
 const allPoints = [points1, points2, points3, points4];
@@ -52,9 +52,9 @@ const headingTexts = [
     step: 1,
     content: (
       <h1 className="text-4xl font-bold text-white text-shadow flex items-center justify-center gap-2">
-        <span className="mb-5"> MY </span>
-        <span className="text-[#E51E31] text-5xl -rotate-6 block">JOURNEY</span>
-        <span className="mt-5"> IS...</span>
+        <span className="mb-5"> MI </span>
+        <span className="text-[#E51E31] text-5xl -rotate-6 block">CAMINO</span>
+        <span className="mt-5"> ES...</span>
       </h1>
     ),
   },
@@ -62,9 +62,9 @@ const headingTexts = [
     step: 2,
     content: (
       <h1 className="text-4xl font-bold text-white text-shadow flex flex-col items-start justify-center">
-        <span>I FACE</span>
-        <span className="text-[#E51E31] text-5xl -rotate-6 block ml-5 -mt-5">
-          CHALLENGES...
+        <span>ENCARO CADA </span>
+        <span className="text-[#E51E31] text-5xl -rotate-6 block ml-10 -mt-1">
+        DESAFÍO...
         </span>
       </h1>
     ),
@@ -73,9 +73,9 @@ const headingTexts = [
     step: 3,
     content: (
       <h1 className="text-4xl font-bold text-white text-shadow flex items-center justify-center gap-2">
-        <span> I MAKE </span>
+        <span> ME ABRO </span>
         <span className="text-[#E51E31] text-5xl -rotate-6 block mt-8">
-          MY WAY...
+        CAMINO...
         </span>
       </h1>
     ),

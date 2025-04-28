@@ -16,12 +16,12 @@ const LandingPage = ({ step, setStep }) => {
     >
       <div className="flex flex-col items-center justify-center gap-6 mt-14">
         <motion.h1
-          className="text-white text-7xl font-bold"
+          className="text-white text-7xl font-bold text-center"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          I <span className="text-[#E51E31]">DEFINE</span> ME
+          LA <span className="text-[#E51E31] ">GRANDEZA </span> ESTÁ EN VOS.
         </motion.h1>
         <motion.div
           className="text-white text-5xl font-bold text-center whitespace-pre-line"
@@ -29,8 +29,8 @@ const LandingPage = ({ step, setStep }) => {
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          EVERY CHALLENGE REVEALS YOUR GREATNESS. TAKE <br /> THE QUIZ TO
-          DISCOVER HOW.
+        CADA DESAFÍO REVELA TU ESPÍRITU. HACÉ EL TEST Y DESCUBRÍ EL ESPIRITÚ MARLBORO QUE SE ALINEA CON VOS
+        COMENZÁ
         </motion.div>
       </div>
       <motion.div className="w-full"
@@ -39,7 +39,7 @@ const LandingPage = ({ step, setStep }) => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <Button className="bg-white text-[#DD7949] w-full rounded-full text-3xl py-8 font-bold" onClick={() => setStep(1)}>
-          START NOW
+        Empieza ahora
         </Button>
       </motion.div>
     </div>

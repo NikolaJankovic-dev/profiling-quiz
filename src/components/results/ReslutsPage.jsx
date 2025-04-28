@@ -8,20 +8,20 @@ import { Button } from "../ui/button";
 import { motion } from "motion/react";
 const texts = [
   {
-    header: "AN ADVENTUROUS \n EXPLORER",
-    desc: "YOU SEEK NEW EXPERIENCES AND THE THRILL OF AN UNMET CHALLENGE.",
+    header: "UN EXPLORADOR \n AUDAZ",
+    desc: "TE GUSTA VIVIR NUEVAS EXPERIENCIAS Y SENTIR LADRENALINA EN CADA NUEVO RETO.",
   },
   {
-    header: "A FOCUSED \n ACHIEVER",
-    desc: "YOU MASTER CHALLENGES WITH ATTENTION TO DETAIL AND CALM CONSIDERATION.",
+    header: "UN ESTRATEGA \n ENFOCADO",
+    desc: "SUPERÁS TUS DESAFÍOS ESTUDIANDO CADA DETALLE Y MANTENIENDO SIEMPRE LA CALMA.",
   },
   {
-    header: "A REFLECTIVE \n WANDERER",
-    desc: "YOU OVERCOME CHALLENGES BY KEEPING YOUR MIND OPEN TO MANY POSSIBILITIES.",
+    header: "UN VIAJERO \n VERSATIL",
+    desc: "ENCARÁS CADA  DESAFÍO CON UNA MENTE ABIERTA PARA ENCONTRAR SIEMPRE NUEVAS POSIBILIDADES.",
   },
   {
-    header: "A COLLECTIVE \n LEADER",
-    desc: "YOU KNOW CHALLENGES ARE SOLVED BY INSPIRING YOURSELF AND OTHERS TO RISE TO THE OCCASION.",
+    header: "UN  LÍDER \n INSPIRADOR",
+    desc: "SABÉS QUE CADA DESAFÍO ES UNA OPORTUNIDAD PARA CRECER JUNTO A LOS QUE TE RODEAN Y MÁS.",
   },
 ];
 
@@ -94,23 +94,23 @@ const ReslutsPage = ({ step, setStep, points, setPoints }) => {
           animate={{ opacity: step === 6 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center  px-8 absolute top-0 left-0 w-full h-full pointer-events-none"
         >
-          <p className="text-7xl">ALLWAYS READY FOR THE NEXT CHALLENGE</p>
+          <p className="text-7xl">¡LISTO PARA EL SIGUIENTE DESAFÍO!</p>
         </motion.div>
         <Button
-  className="bg-white text-black w-full rounded-full text-3xl py-8 font-bold overflow-hidden"
-  onClick={handleClick}
->
-  <motion.span
-    key={step} // VAŽNO: Key mora biti različit za različite tekstove da animacija proradi
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -20 }}
-    transition={{ duration: 0.4 }}
-    className="w-full text-center block"
-  >
-    {step === 5 ? "GOT IT!" : "PLAY AGAIN"}
-  </motion.span>
-</Button>
+          className="bg-white text-black w-full rounded-full text-3xl py-8 font-bold overflow-hidden"
+          onClick={handleClick}
+        >
+          <motion.span
+            key={step} // VAŽNO: Key mora biti različit za različite tekstove da animacija proradi
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="w-full text-center block"
+          >
+            {step === 5 ? " ¡OK, PERFECTO!" : "¡VUELVE A JUGAR!"}
+          </motion.span>
+        </Button>
       </div>
     </div>
   );
