@@ -24,7 +24,7 @@ const LandingPage = ({ step, setStep }) => {
           LA <span className="text-[#E51E31] ">GRANDEZA </span> ESTÁ EN VOS.
         </motion.h1>
         <motion.div
-          className="text-white text-5xl font-bold text-center whitespace-pre-line"
+          className="text-white text-4xl font-bold text-center whitespace-pre-line"
             initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
