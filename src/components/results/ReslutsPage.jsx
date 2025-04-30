@@ -94,7 +94,7 @@ const ReslutsPage = ({ step, setStep, points, setPoints }) => {
           animate={{ opacity: step === 6 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center  px-8 absolute top-0 left-0 w-full h-full pointer-events-none"
         >
-          <p className="text-7xl">ALLWAYS READY FOR THE NEXT CHALLENGE</p>
+          <p className="text-6xl">ALLWAYS READY FOR THE NEXT CHALLENGE</p>
         </motion.div>
         <Button
   className="bg-white text-black w-full rounded-full text-3xl py-8 font-bold overflow-hidden"
