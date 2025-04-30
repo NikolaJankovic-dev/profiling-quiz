@@ -86,8 +86,8 @@ const ReslutsPage = ({ step, setStep, points, setPoints }) => {
           animate={{ opacity: step === 5 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center mt-6 px-8"
         >
-          <h1 className="text-6xl">{currentText.header}</h1>
-          <h1 className="text-4xl">{currentText.desc}</h1>
+          <h1 className="text-5xl">{currentText.header}</h1>
+          <h1 className="text-3xl">{currentText.desc}</h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
