@@ -7,8 +7,8 @@ function App() {
   const [step, setStep] = useState(0);
   const [points, setPoints] = useState(0);
   return (
-    <div className="h-screen  flex items-center justify-center bg-gray-700 overflow-hidden">
-      <div className=" sm:rounded-lg rounded-none shadow-lg h-screen sm:aspect-[9/16] aspect-auto w-full sm:w-auto relative">
+    <div className="  flex items-center justify-center bg-gray-700 overflow-hidden" style={{height: window.innerHeight}}>
+      <div className=" sm:rounded-lg rounded-none shadow-lg  sm:aspect-[9/16] aspect-auto w-full sm:w-auto relative" style={{height: window.innerHeight}}>
         <LandingPage step={step} setStep={setStep} />
        
         {(step === 4 || step === 5 || step === 6) && (

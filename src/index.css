@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "PerfectMoment";
-    src: url("../public/fonts/PerfectMoment-Script.ttf");
+    src: url("/fonts/PerfectMoment-Script.ttf");
 }
 
 @font-face {
     font-family: "HackneyVector";
-    src: url("../public/fonts/Hackney-Vector.ttf");
+    src: url("/fonts/Hackney-Vector.ttf");
 }
 
 

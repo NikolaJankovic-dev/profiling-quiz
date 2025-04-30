@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const LandingPage = ({ step, setStep }) => {
   return (
     <div
-      className="flex flex-col items-center justify-between h-screen px-4 py-10"
+      className="flex flex-col items-center justify-between h-full px-4 py-10"
       style={{
         backgroundImage: step < 2 ? `url(${profilingIntro})` : "none",
         backgroundSize: "cover",
