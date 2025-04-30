@@ -22,27 +22,27 @@ import collaboration from "@/assets/images/Quiz2/Profiling_Q2 – a5 - noText.we
 import leading from "@/assets/images/Quiz3/Profiling_Q3 – a5 - noText.webp";
 
 const points1 = [
-  { img: epic, text: "Epic" },
-  { img: head, text: "Head on" },
-  { img: fast, text: "As fast as possible" },
+  { img: epic, text: "Epic", value: "a" },
+  { img: head, text: "Head on", value: "a" },
+  { img: fast, text: "As fast as possible", value: "a" },
 ];
 
 const points2 = [
-  { img: unique, text: "Unique" },
-  { img: plan, text: "With a plan" },
-  { img: oneStep, text: "One step at a time" },
+  { img: unique, text: "Unique", value: "b" },
+  { img: plan, text: "With a plan", value: "b" },
+  { img: oneStep, text: "One step at a time", value: "b" },
 ];
 
 const points3 = [
-  { img: winding, text: "Winding" },
-  { img: flow, text: "By going with the flow" },
-  { img: spontaneous, text: "Spontaneously" },
+  { img: winding, text: "Winding", value: "c" },
+  { img: flow, text: "By going with the flow", value: "c" },
+  { img: spontaneous, text: "Spontaneously", value: "c" },
 ];
 
 const points4 = [
-  { img: worth, text: "Worth savoring" },
-  { img: collaboration, text: "Collaboratively" },
-  { img: leading, text: "By leading" },
+  { img: worth, text: "Worth savoring", value: "d" },
+  { img: collaboration, text: "Collaboratively", value: "d" },
+  { img: leading, text: "By leading", value: "d" },
 ];
 
 const allPoints = [points1, points2, points3, points4];
@@ -82,7 +82,7 @@ const headingTexts = [
   },
 ];
 
-const GamePage = ({ step, setStep, points, setPoints }) => {
+const GamePage = ({ step, setStep, setAnswers }) => {
   useEffect(() => {
     if (step === 4) {
       const timeout = setTimeout(() => {
@@ -149,7 +149,7 @@ const GamePage = ({ step, setStep, points, setPoints }) => {
                 <div className="w-full flex items-center justify-center"></div>
 
                 {/* Pitanja */}
-                {item.map(({ img, text }, i) => (
+                {item.map(({ img, text, value }, i) => (
                   <div
                     key={i}
                     className="w-full flex items-center justify-center "
@@ -161,7 +161,11 @@ const GamePage = ({ step, setStep, points, setPoints }) => {
                     }}
                     onClick={() => {
                       setStep((prev) => prev + 1);
-                      setPoints((prev) => prev + rowIndex + 1);
+                      // setPoints((prev) => prev + rowIndex + 1);
+                      setAnswers((prev) => ({
+                        ...prev,
+                        [i + 1]: value,
+                      }));
                     }}
                   >
                     <h1 className="text-5xl font-bold text-white text-shadow text-center">
