@@ -10,6 +10,12 @@
     src: url("/fonts/Hackney-Vector.ttf");
 }
 
+@font-face {
+    font-family: "HackneySVG";
+    src: url("/fonts/Hackney-SVG.otf");
+}
+
+
 
 body {
     font-family: "HackneyVector", sans-serif;

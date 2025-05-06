@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import result1 from "@/assets/images/Profiling Results/Profiling_Profile-1 - noText.webp";
 import result2 from "@/assets/images/Profiling Results/Profiling_Profile-2 - noText.webp";
-import result3 from "@/assets/images/Profiling Results/Profiling_Profile-3 - noText.webp";
+import result3 from "@/assets/images/Profiling Results/Profiling_Profile-3 – noText.webp";
 import result4 from "@/assets/images/Profiling Results/Profiling_Profile-4 - noText.webp";
 import outro from "@/assets/images/Outro/Outro - noText.webp";
 import { Button } from "../ui/button";
@@ -105,12 +105,13 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
   };
   return (
     <div
-      className="absolute top-0 left-0 w-full h-full grid grid-cols-1 grid-rows-3 z-0 text-white"
+      className="absolute top-0 left-0 w-full h-full grid grid-cols-1 grid-rows-3 z-0 "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+
       }}
     >
       <motion.div
@@ -125,7 +126,12 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           backgroundRepeat: "no-repeat",
         }}
       ></motion.div>
-      <div className=" text-7xl  text-center self-center perfect-moment relative z-10">
+      <div className=" text-7xl  text-center self-center perfect-moment relative z-10" style={{
+          background: '#fff',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
         I AM...
       </div>
       <div className="flex flex-col justify-between items-center row-span-2 px-4 py-10 relative z-10">
@@ -134,18 +140,33 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           animate={{ opacity: step === 5 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center mt-6 px-8"
         >
-          <h1 className="text-5xl">{currentText.header}</h1>
-          <h1 className="text-3xl">{currentText.desc}</h1>
+          <h1 className="text-5xl" style={{
+          background: '#fff',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>{currentText.header}</h1>
+          <h1 className="text-3xl" style={{
+          background: '#fff',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>{currentText.desc}</h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: step === 6 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center  px-8 absolute top-0 left-0 w-full h-full pointer-events-none"
         >
-          <p className="text-6xl">ALLWAYS READY FOR THE NEXT CHALLENGE</p>
+          <p className="text-6xl" style={{
+          background: '#fff',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>ALLWAYS READY FOR THE NEXT CHALLENGE</p>
         </motion.div>
         <Button
-          className="bg-white text-black w-full rounded-full text-3xl py-8 font-bold overflow-hidden"
+          className="bg-white text-black w-full rounded-full text-3xl py-8 overflow-hidden"
           onClick={handleClick}
         >
           <motion.span
@@ -154,9 +175,9 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="w-full text-center block"
+            className="w-full text-center block cursor-pointer"
           >
-            {step === 5 ? "GOT IT!" : "PLAY AGAIN"}
+            {step === 6 ? "PLAY AGAIN" :"GOT IT!" }
           </motion.span>
         </Button>
       </div>

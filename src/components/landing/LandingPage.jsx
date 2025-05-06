@@ -14,17 +14,22 @@ const LandingPage = ({ step, setStep }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex flex-col items-center justify-center gap-6 mt-14">
+      <div className="flex flex-col items-center  gap-6 mt-14">
         <motion.h1
-          className="text-white text-7xl font-bold"
+          className="text-white text-7xl flex items-center justify-center gap-4"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          I <span className="text-[#E51E31]">DEFINE</span> ME
+          I <span className="perfect-moment mx-2 pb-0 ">DEFINE</span> ME
         </motion.h1>
         <motion.div
-          className="text-white text-5xl font-bold text-center whitespace-pre-line"
+          className="text-white text-5xl text-center whitespace-pre-line" style={{
+            background: '#FFFFFF',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
             initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -38,7 +43,7 @@ const LandingPage = ({ step, setStep }) => {
         animate={{  y: step === 0 ? 0 : 150 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Button className="bg-white text-[#DD7949] w-full rounded-full text-3xl py-8 font-bold" onClick={() => setStep(1)}>
+        <Button className="bg-white  w-full rounded-full text-3xl py-8 cursor-pointer " onClick={() => setStep(1)}>
           START NOW
         </Button>
       </motion.div>
