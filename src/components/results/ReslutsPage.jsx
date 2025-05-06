@@ -25,34 +25,82 @@ const texts = [
   },
 ];
 
-const ReslutsPage = ({ step, setStep, points, setPoints }) => {
+const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
   const [bgImage, setBgImage] = useState(result1);
   const [currentText, setCurrentText] = useState(texts[0]);
+  const [result, setResult] = useState(1);
 
   useEffect(() => {
-    if (points > 4) {
+    const values = Object.values(answers);
+    const counts = values.reduce((acc, val) => {
+      acc[val] = (acc[val] || 0) + 1;
+      return acc;
+    }, {});
+  
+    let mostCommon = null;
+    let maxCount = 0;
+  
+    Object.entries(counts).forEach(([key, count]) => {
+      if (count > maxCount) {
+        mostCommon = key;
+        maxCount = count;
+      }
+    });
+  
+    if (maxCount === 1) {
+      // svi odgovori različiti => uzmi poslednji odgovor
+      const lastAnswer = values[values.length - 1];
+      setResult(getResultNumber(lastAnswer));
+    } else {
+      setResult(getResultNumber(mostCommon));
+    }
+  }, [answers]);
+  
+  const getResultNumber = (letter) => {
+    switch (letter) {
+      case "a":
+        return 1;
+      case "b":
+        return 2;
+      case "c":
+        return 3;
+      case "d":
+        return 4;
+      default:
+        return 1; // fallback
+    }
+  };
+  
+  
+
+  useEffect(() => {
+    if (result === 2) {
       setBgImage(result2);
       setCurrentText(texts[1]);
       console.log("case 2");
     }
-    if (points > 7) {
+    if (result === 3) {
       setBgImage(result3);
       setCurrentText(texts[2]);
       console.log("case 3");
     }
-    if (points > 10) {
+    if (result === 4) {
       setBgImage(result4);
       setCurrentText(texts[3]);
       console.log("case 4");
     }
-  }, [points]);
+  }, [result]);
 
   const handleClick = () => {
     if (step === 5) {
       setStep(6);
     } else {
       setStep(0);
-      setPoints(0);
+      setAnswers({
+        1: '',
+        2: '',
+        3: '',
+      });
     }
   };
   return (

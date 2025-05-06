@@ -22,27 +22,27 @@ import collaboration from "@/assets/images/Quiz2/Profiling_Q2 – a5 - noText.we
 import leading from "@/assets/images/Quiz3/Profiling_Q3 – a5 - noText.webp";
 
 const points1 = [
-  { img: epic, text: "ÉPICO" },
-  { img: head, text: "DE FRENTE" },
-  { img: fast, text: "LO MÁS RÁPIDO POSIBLE" },
+  { img: epic, text: "ÉPICO", value: "a" },
+  { img: head, text: "DE FRENTE", value: "a" },
+  { img: fast, text: "LO MÁS RÁPIDO POSIBLE", value: "a" },
 ];
 
 const points2 = [
-  { img: unique, text: "ÚNICO" },
-  { img: plan, text: "CON UN PLAN" },
-  { img: oneStep, text: "PASO A PASO" },
+  { img: unique, text: "ÚNICO", value: "b" },
+  { img: plan, text: "CON UN PLAN", value: "b" },
+  { img: oneStep, text: "PASO A PASO", value: "b" },
 ];
 
 const points3 = [
-  { img: winding, text: "SORPRENDENTE" },
-  { img: flow, text: "DEJÁNDOME LLEVAR" },
-  { img: spontaneous, text: "ESPONTÁNEAMENTE" },
+  { img: winding, text: "SORPRENDENTE", value: "c" },
+  { img: flow, text: "DEJÁNDOME LLEVAR", value: "c" },
+  { img: spontaneous, text: "ESPONTÁNEAMENTE", value: "c" },
 ];
 
 const points4 = [
-  { img: worth, text: "INOLVIDABLE" },
-  { img: collaboration, text: "EN EQUIPO" },
-  { img: leading, text: "LIDERÁNDOLO" },
+  { img: worth, text: "INOLVIDABLE", value: "d" },
+  { img: collaboration, text: "EN EQUIPO", value: "d" },
+  { img: leading, text: "LIDERÁNDOLO", value: "d" },
 ];
 
 const allPoints = [points1, points2, points3, points4];
@@ -82,7 +82,7 @@ const headingTexts = [
   },
 ];
 
-const GamePage = ({ step, setStep, points, setPoints }) => {
+const GamePage = ({ step, setStep, setAnswers }) => {
   useEffect(() => {
     if (step === 4) {
       const timeout = setTimeout(() => {
@@ -149,7 +149,7 @@ const GamePage = ({ step, setStep, points, setPoints }) => {
                 <div className="w-full flex items-center justify-center"></div>
 
                 {/* Pitanja */}
-                {item.map(({ img, text }, i) => (
+                {item.map(({ img, text, value }, i) => (
                   <div
                     key={i}
                     className="w-full flex items-center justify-center "
@@ -161,7 +161,11 @@ const GamePage = ({ step, setStep, points, setPoints }) => {
                     }}
                     onClick={() => {
                       setStep((prev) => prev + 1);
-                      setPoints((prev) => prev + rowIndex + 1);
+                      // setPoints((prev) => prev + rowIndex + 1);
+                      setAnswers((prev) => ({
+                        ...prev,
+                        [i + 1]: value,
+                      }));
                     }}
                   >
                     <h1 className="text-5xl font-bold text-white text-shadow text-center">
