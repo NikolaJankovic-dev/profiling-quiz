@@ -1,14 +1,21 @@
+
 @import "tailwindcss";
 
 @font-face {
     font-family: "PerfectMoment";
-    src: url("../public/fonts/PerfectMoment-Script.ttf");
+    src: url("/fonts/PerfectMoment-Script.ttf");
 }
 
 @font-face {
     font-family: "HackneyVector";
-    src: url("../public/fonts/Hackney-Vector.ttf");
+    src: url("/fonts/Hackney-Vector.ttf");
 }
+
+@font-face {
+    font-family: "HackneySVG";
+    src: url("/fonts/Hackney-SVG.otf");
+}
+
 
 
 body {
@@ -18,4 +25,3 @@ body {
 .perfect-moment {
     font-family: "PerfectMoment", sans-serif;
 }
-

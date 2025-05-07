@@ -36,17 +36,17 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
       acc[val] = (acc[val] || 0) + 1;
       return acc;
     }, {});
-  
+
     let mostCommon = null;
     let maxCount = 0;
-  
+
     Object.entries(counts).forEach(([key, count]) => {
       if (count > maxCount) {
         mostCommon = key;
         maxCount = count;
       }
     });
-  
+
     if (maxCount === 1) {
       // svi odgovori različiti => uzmi poslednji odgovor
       const lastAnswer = values[values.length - 1];
@@ -55,7 +55,7 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
       setResult(getResultNumber(mostCommon));
     }
   }, [answers]);
-  
+
   const getResultNumber = (letter) => {
     switch (letter) {
       case "a":
@@ -70,8 +70,6 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
         return 1; // fallback
     }
   };
-  
-  
 
   useEffect(() => {
     if (result === 2) {
@@ -97,9 +95,9 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
     } else {
       setStep(0);
       setAnswers({
-        1: '',
-        2: '',
-        3: '',
+        1: "",
+        2: "",
+        3: "",
       });
     }
   };
@@ -125,7 +123,15 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           backgroundRepeat: "no-repeat",
         }}
       ></motion.div>
-      <div className=" text-7xl  text-center self-center perfect-moment relative z-10">
+      <div
+        className=" text-7xl  text-center self-center perfect-moment relative z-10"
+        style={{
+          background: "#fff",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
         I AM...
       </div>
       <div className="flex flex-col justify-between items-center row-span-2 px-4 py-10 relative z-10">
@@ -134,8 +140,28 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           animate={{ opacity: step === 5 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center mt-6 px-8"
         >
-          <h1 className="text-5xl">{currentText.header}</h1>
-          <h1 className="text-3xl">{currentText.desc}</h1>
+          <h1
+            className="text-5xl"
+            style={{
+              background: "#fff",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            {currentText.header}
+          </h1>
+          <h1
+            className="text-3xl"
+            style={{
+              background: "#fff",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            {currentText.desc}
+          </h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -145,7 +171,7 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           <p className="text-6xl">¡LISTO PARA EL SIGUIENTE DESAFÍO!</p>
         </motion.div>
         <Button
-          className="bg-white text-black w-full rounded-full text-3xl py-8 font-bold overflow-hidden"
+          className="bg-white text-black w-full rounded-full text-3xl py-8   overflow-hidden"
           onClick={handleClick}
         >
           <motion.span
@@ -156,7 +182,7 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
             transition={{ duration: 0.4 }}
             className="w-full text-center block"
           >
-            {step === 5 ? " ¡OK, PERFECTO!" : "¡VUELVE A JUGAR!"}
+           {step === 6 ? "¡VUELVE A JUGAR!" : "¡OK, PERFECTO!"}
           </motion.span>
         </Button>
       </div>

@@ -51,20 +51,69 @@ const headingTexts = [
   {
     step: 1,
     content: (
-      <h1 className="text-4xl font-bold text-white text-shadow flex items-center justify-center gap-2">
-        <span className="mb-5"> MI </span>
-        <span className="text-[#E51E31] text-5xl -rotate-6 block">CAMINO</span>
-        <span className="mt-5"> ES...</span>
+      <h1 className="text-4xl   text-white text-shadow flex items-center justify-center gap-2">
+        <span
+          className="mb-5"
+          style={{
+            background: "#fff",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          {" "}
+          MI{" "}
+        </span>
+        <span
+          className="text-5xl -rotate-6 block perfect-moment"
+          style={{
+            background: "#E51E31",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          CAMINO
+        </span>
+        <span
+          className="mt-5"
+          style={{
+            background: "#fff",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          {" "}
+          ES...
+        </span>
       </h1>
     ),
   },
   {
     step: 2,
     content: (
-      <h1 className="text-4xl font-bold text-white text-shadow flex flex-col items-start justify-center">
-        <span>ENCARO CADA </span>
-        <span className="text-[#E51E31] text-5xl -rotate-6 block ml-10 -mt-1">
-        DESAFÍO...
+      <h1 className="text-4xl   text-white text-shadow flex flex-col items-start justify-center">
+        <span
+          style={{
+            background: "#fff",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          ENCARO CADA{" "}
+        </span>
+        <span
+          className="text-5xl -rotate-6 block ml-5  perfect-moment"
+          style={{
+            background: "#E51E31",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          DESAFÍO...
         </span>
       </h1>
     ),
@@ -72,10 +121,28 @@ const headingTexts = [
   {
     step: 3,
     content: (
-      <h1 className="text-4xl font-bold text-white text-shadow flex items-center justify-center gap-2">
-        <span> ME ABRO </span>
-        <span className="text-[#E51E31] text-5xl -rotate-6 block mt-8">
-        CAMINO...
+      <h1 className="text-4xl   text-white text-shadow flex items-center justify-center gap-2">
+        <span
+          style={{
+            background: "#fff",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          {" "}
+          ME ABRO{" "}
+        </span>
+        <span
+          className="text-5xl -rotate-6 block mt-8 perfect-moment"
+          style={{
+            background: "#E51E31",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          CAMINO...
         </span>
       </h1>
     ),
@@ -168,7 +235,15 @@ const GamePage = ({ step, setStep, setAnswers }) => {
                       }));
                     }}
                   >
-                    <h1 className="text-5xl font-bold text-white text-shadow text-center">
+                    <h1
+                      className="text-5xl text-white text-shadow text-center"
+                      style={{
+                        background: "#fff",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                      }}
+                    >
                       {text}
                     </h1>
                   </div>
