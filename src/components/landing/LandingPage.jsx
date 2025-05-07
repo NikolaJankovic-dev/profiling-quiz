@@ -16,13 +16,19 @@ const LandingPage = ({ step, setStep }) => {
     >
       <div className="flex flex-col items-center justify-center gap-6 mt-14">
         <motion.h1
-          className="text-white text-5xl flex items-center justify-center gap-1"
+          className="text-white text-5xl text-center flex flex-col"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          LA <span className="perfect-moment mx-2 pb-0 ">GRANDEZA </span> ESTÁ
-          EN VOS.
+          <div className="flex gap-2">
+            <span className="inline-block "> LA </span>
+            <span className="perfect-moment mx-2 inline-block ">
+              {" "}
+              GRANDEZA{" "}
+            </span>
+          </div>
+          ESTÁ EN VOS.
         </motion.h1>
         <motion.div
           className="text-white text-4xl text-center whitespace-pre-line"
