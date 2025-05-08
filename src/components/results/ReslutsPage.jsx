@@ -9,19 +9,19 @@ import { motion } from "motion/react";
 const texts = [
   {
     header: "UN EXPLORADOR \n AUDAZ",
-    desc: "TE GUSTA VIVIR NUEVAS EXPERIENCIAS Y SENTIR LADRENALINA EN CADA NUEVO RETO.",
+    desc: "TE GUSTA VIVIR NUEVAS EXPERIENCIAS Y SENTIR LA ADRENALINA EN CADA NUEVO RETO.",
   },
   {
     header: "UN ESTRATEGA \n ENFOCADO",
     desc: "SUPERÁS TUS DESAFÍOS ESTUDIANDO CADA DETALLE Y MANTENIENDO SIEMPRE LA CALMA.",
   },
   {
-    header: "UN VIAJERO \n VERSATIL",
+    header: "UN VIAJERO \n VERSÁTIL",
     desc: "ENCARÁS CADA  DESAFÍO CON UNA MENTE ABIERTA PARA ENCONTRAR SIEMPRE NUEVAS POSIBILIDADES.",
   },
   {
     header: "UN  LÍDER \n INSPIRADOR",
-    desc: "SABÉS QUE CADA DESAFÍO ES UNA OPORTUNIDAD PARA CRECER JUNTO A LOS QUE TE RODEAN Y MÁS.",
+    desc: "SABÉS QUE CADA DESAFÍO ES UNA OPORTUNIDAD PARA CRECER JUNTO A LOS QUE TE RODEAN, Y MUCHO MÁS.",
   },
 ];
 
@@ -168,7 +168,7 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
           animate={{ opacity: step === 6 ? 1 : 0 }}
           className="flex flex-col justify-center items-center row-span-2 gap-10 text-center  px-8 absolute top-0 left-0 w-full h-full pointer-events-none"
         >
-          <p className="text-6xl">¡LISTO PARA EL SIGUIENTE DESAFÍO!</p>
+          <p className="text-6xl">¡LISTO PARA <br/> EL SIGUIENTE <br/> DESAFÍO!</p>
         </motion.div>
         <Button
           className="bg-white text-black w-full rounded-full text-3xl py-8   overflow-hidden"
@@ -182,7 +182,7 @@ const ReslutsPage = ({ step, setStep, answers, setAnswers }) => {
             transition={{ duration: 0.4 }}
             className="w-full text-center block"
           >
-           {step === 6 ? "¡VUELVE A JUGAR!" : "¡OK, PERFECTO!"}
+           {step === 6 ? "¡VOLVÉ A JUGAR! " : "¡OK, PERFECTO!"}
           </motion.span>
         </Button>
       </div>

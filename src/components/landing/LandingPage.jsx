@@ -42,8 +42,8 @@ const LandingPage = ({ step, setStep }) => {
           animate={{ opacity: step === 0 ? 1 : 0, y: step === 0 ? 0 : -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          CADA DESAFÍO REVELA TU ESPÍRITU. HACÉ EL TEST Y DESCUBRÍ EL ESPIRITÚ
-          MARLBORO QUE SE ALINEA CON VOS COMENZÁ
+          CADA DESAFÍO REVELA TU ESENCIA. HACÉ EL TEST Y DESCUBRÍ EL ESPÍRITU
+          MARLBORO QUE SE ALINEA CON VOS 
         </motion.div>
       </div>
       <motion.div
@@ -56,7 +56,7 @@ const LandingPage = ({ step, setStep }) => {
           className="bg-white  w-full rounded-full text-3xl py-8 cursor-pointer "
           onClick={() => setStep(1)}
         >
-          Empieza ahora
+          COMENZÁ AHORA
         </Button>
       </motion.div>
     </div>
