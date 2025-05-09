@@ -43,7 +43,7 @@ const LandingPage = ({ step, setStep }) => {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           CADA DESAFÍO REVELA TU ESENCIA. HACÉ EL TEST Y DESCUBRÍ EL ESPÍRITU
-          MARLBORO QUE SE ALINEA CON VOS 
+          MARLBORO QUE SE ALINEA CON VOS.
         </motion.div>
       </div>
       <motion.div
